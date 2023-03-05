@@ -72,6 +72,7 @@ p{
 }
 
 nav{
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +86,49 @@ nav{
     gap: 45px;
 }
 
-@media screen and (max-width: 800px) {
+.menu-items{
+    display: block;
+}
+
+@media screen and (min-width:601px){
+    .fa-solid{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width:1000px) {
+
+    body{
+        width: 100%;
+        max-width: 617px;
+        height: 100vh;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 72px;
+        line-height: 83px;
+        /* identical to box height, or 115% */
+        letter-spacing: -1.6px;
+    }
+
+    p{
+        font-size: 22px;
+        line-height: 33px;
+        /* or 150% */
+        text-align: center;
+    }
+
+    .info-container{
+        max-width: 574px;
+    }
+
+    .img-container{
+        max-width: 616px;
+    }
+}
+
+@media screen and (max-width: 600px) {
 
     body{
         align-items: center;
@@ -117,12 +160,35 @@ nav{
         max-width: 217px;
     }
 
-    nav{
-        max-width: 256px;
-    }
-
-    .menu{
+    .nav{
         overflow: hidden;
     }
-}
 
+    .nav a{
+        float: left;
+    }
+
+    .menu-item{
+        display: none;
+    }
+
+    .icon{
+        display: block;
+        float: right;
+    }
+
+    .nav.responsive{
+        position: relative;
+    }
+    .nav.responsive.icon {
+        position: absolute;
+    }
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    
+   
+
+}

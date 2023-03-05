@@ -15,12 +15,13 @@
 <body>
     <nav>
         <img src="/images/Logo.svg" alt="logo">
-        <div class="menu" id="nav-menu">
-            <a class="menu-item" href="#">Works</a>
-            <a class="menu-item" href="#">Services</a>
-            <a class="menu-item" href="#">Contact</a>
-            <a class="menu-item" href="#"></a>
-            <a class="icon" onclick="burgerMenu()"><i class="fa-solid fa-bars fa-2x"></i></a>
+        <div class="nav" id="nav-menu">
+            <ul>
+                <li><a class="menu-item" href="#">Works</a></li>
+                <li><a class="menu-item" href="#">Services</a></li>
+                <li><a class="menu-item" href="#">Contact</a></li>
+                <li> <a class="icon" onclick="burgerMenu()"><i class="fa-solid fa-bars fa-2x"></i></a></li>
+            </ul>
         </div>
     </nav>
     <div class="section">
@@ -30,7 +31,7 @@
         </div>
         <div class="img-container">
             <picture>
-                <source media="(max-width: 800px)" srcset="/images/japan-small.jpg">
+                <source media="(max-width: 600px)" srcset="/images/japan-small.jpg">
                 <source media="(max-width: 1000px)" srcset="/images/japan-medium.jpg">
                 <source media="(min-width: 1001px)" srcset="/images/japan-big.jpg">
                 <img src="images/japan-big.jgg" alt="Mountain with snow">
@@ -41,10 +42,10 @@
     <script>
         function burgerMenu() {
             let burger = document.getElementById("nav-menu");
-            if (burger.className === "menu") {
+            if (burger.className === "nav") {
             burger.className += " responsive";
             } else {
-            burger.className = "menu";
+            burger.className = "nav";
             }
         }
     </script>
